@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ceyda/Desktop/42Havuz/C01/ex03/ft_div_mod'
+relocations:     []
+...
