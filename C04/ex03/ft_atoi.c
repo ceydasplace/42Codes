@@ -1,48 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:11:39 by ceydac            #+#    #+#             */
-/*   Updated: 2025/08/30 16:51:24 by ceydac           ###   ########.fr       */
+/*   Created: 2025/09/01 12:49:14 by ceydac            #+#    #+#             */
+/*   Updated: 2025/09/01 13:30:26 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+int ft_atoi(char *str)
 {
 	int	i;
-	int	a;
-	
+	int	sayi;
+	int	sign;
+
 	i = 0;
-	a = 0;
-	while (src[a] != 0)
+	sayi = 0;
+	sign = 1;
+	while (str[i] != 0 && (str[i] == '\t' && str[i] == '\r' || str[i] == ' '))
+		i++;
+	while (str[i] == '+' || str[i] == '-')
 	{
-		a++;
-	}
-	if (size != 0)
-	{
-		while (dest[i] != '\0')
+		if (str[i] == '-')
 		{
-			dest[i] = src[i];
-			if (a < size)
-				dest[i] = 0;
-			i++;
+			sign *= -1;
 		}
+		i++;
 	}
-	dest[i] = 0;
-	return (size);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		sayi = (str[i] - 48) + (sayi * 10);
+		i++;
+	}
+	return (sayi * sign);
 }
 
 #include <stdio.h>
 
 int	main(void)
 {
-	char	src[] = "selam";
-	char	dest[10] = "se";
-	int	i = 6;
-
-	ft_strlcpy(dest, src, i);
-	printf("%s", dest);
+	char	str[] = " ---+--+1234ab567";
+	ft_atoi(str);
+	printf("%d", ft_atoi(str));
 }

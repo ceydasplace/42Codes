@@ -1,48 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:11:39 by ceydac            #+#    #+#             */
-/*   Updated: 2025/08/30 16:51:24 by ceydac           ###   ########.fr       */
+/*   Created: 2025/09/01 18:26:19 by ceydac            #+#    #+#             */
+/*   Updated: 2025/09/01 18:44:19 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+int ft_iterative_factorial(int nb)
 {
-	int	i;
-	int	a;
-	
-	i = 0;
-	a = 0;
-	while (src[a] != 0)
+	int	sayi;
+
+	sayi = 1;
+	if (nb < 0)
+		return (0);
+	if (nb == 0)
+		return (1);
+	while (nb >= 1)
 	{
-		a++;
+		sayi *= nb;
+		nb--;
 	}
-	if (size != 0)
-	{
-		while (dest[i] != '\0')
-		{
-			dest[i] = src[i];
-			if (a < size)
-				dest[i] = 0;
-			i++;
-		}
-	}
-	dest[i] = 0;
-	return (size);
+	return (sayi);
 }
 
 #include <stdio.h>
 
 int	main(void)
 {
-	char	src[] = "selam";
-	char	dest[10] = "se";
-	int	i = 6;
-
-	ft_strlcpy(dest, src, i);
-	printf("%s", dest);
+	int nb = 4;
+	printf("%d", ft_iterative_factorial(nb));
 }

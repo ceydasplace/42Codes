@@ -1,38 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/29 19:42:39 by ceyda             #+#    #+#             */
-/*   Updated: 2025/08/30 12:45:33 by ceydac           ###   ########.fr       */
+/*   Created: 2025/09/01 18:44:37 by ceydac            #+#    #+#             */
+/*   Updated: 2025/09/01 18:45:50 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strlowcase(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != 0)
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			str[i] = str[i] + 32;
-		}
-		i++;
-	}
-	return (str);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char	str[] = "selam";
-	char	str1[] = "SELam12LAR";
-
-	printf("%s\n", ft_strlowcase(str));
-	printf("%s", ft_strlowcase(str1));
-}

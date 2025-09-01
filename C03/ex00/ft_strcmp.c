@@ -1,48 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:11:39 by ceydac            #+#    #+#             */
-/*   Updated: 2025/08/30 16:51:24 by ceydac           ###   ########.fr       */
+/*   Created: 2025/08/30 17:38:42 by ceydac            #+#    #+#             */
+/*   Updated: 2025/08/30 17:53:44 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-	int	a;
-	
-	i = 0;
-	a = 0;
-	while (src[a] != 0)
-	{
-		a++;
-	}
-	if (size != 0)
-	{
-		while (dest[i] != '\0')
-		{
-			dest[i] = src[i];
-			if (a < size)
-				dest[i] = 0;
-			i++;
-		}
-	}
-	dest[i] = 0;
-	return (size);
+	unsigned int i1;
+	unsigned int i2;
+
+	i1 = 0;
+	i2 = 0;
+	while (s1[i1] != 0)
+		i1++;
+	while (s2[i2] != 0)
+		i2++;
+	return (i1 - i2);
 }
 
 #include <stdio.h>
 
 int	main(void)
 {
-	char	src[] = "selam";
-	char	dest[10] = "se";
-	int	i = 6;
-
-	ft_strlcpy(dest, src, i);
-	printf("%s", dest);
+	char	s1[] = "selam";
+	char	s2[] = "selam123";
+	printf("%d", ft_strcmp(s1, s2));
 }

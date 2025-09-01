@@ -1,48 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:11:39 by ceydac            #+#    #+#             */
-/*   Updated: 2025/08/30 16:51:24 by ceydac           ###   ########.fr       */
+/*   Created: 2025/08/30 19:37:37 by ceydac            #+#    #+#             */
+/*   Updated: 2025/08/30 19:43:35 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+char *ft_strstr(char *str, char *to_find)
 {
 	int	i;
 	int	a;
-	
+
 	i = 0;
 	a = 0;
-	while (src[a] != 0)
+	while (str[i] != 0)
 	{
-		a++;
+		if (to_find[a] == str[i])
+			a++;
+		i++;
 	}
-	if (size != 0)
-	{
-		while (dest[i] != '\0')
-		{
-			dest[i] = src[i];
-			if (a < size)
-				dest[i] = 0;
-			i++;
-		}
-	}
-	dest[i] = 0;
-	return (size);
+	to_find[a] = 0;
+	return (to_find);
 }
 
 #include <stdio.h>
 
 int	main(void)
 {
-	char	src[] = "selam";
-	char	dest[10] = "se";
-	int	i = 6;
+	char	to_find[] = "sayarlama";
+	char	str[] = "Bilgisayar";
+	ft_strstr(str, to_find);
 
-	ft_strlcpy(dest, src, i);
-	printf("%s", dest);
+	printf("%s", ft_strstr(str, to_find));
 }

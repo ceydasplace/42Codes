@@ -1,48 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:11:39 by ceydac            #+#    #+#             */
-/*   Updated: 2025/08/30 16:51:24 by ceydac           ###   ########.fr       */
+/*   Created: 2025/09/01 12:36:36 by ceydac            #+#    #+#             */
+/*   Updated: 2025/09/01 12:47:33 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+#include <unistd.h>
+
+void	ft_putchar(char	c)
 {
-	int	i;
-	int	a;
-	
-	i = 0;
-	a = 0;
-	while (src[a] != 0)
-	{
-		a++;
-	}
-	if (size != 0)
-	{
-		while (dest[i] != '\0')
-		{
-			dest[i] = src[i];
-			if (a < size)
-				dest[i] = 0;
-			i++;
-		}
-	}
-	dest[i] = 0;
-	return (size);
+	write(1, &c, 1);
 }
 
-#include <stdio.h>
-
+void ft_putnbr(int nb)
+{
+	if (nb == 0)
+		ft_putchar('0');
+	if (nb == 2147483647)
+	{
+		ft_putchar('2');
+		nb = 147483647;
+	}
+	if (nb == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		nb = 147483648;
+	}
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb *= -1;
+	}
+	if (nb > 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	if (nb < 10)
+		ft_putchar(nb + 48);
+}
 int	main(void)
 {
-	char	src[] = "selam";
-	char	dest[10] = "se";
-	int	i = 6;
-
-	ft_strlcpy(dest, src, i);
-	printf("%s", dest);
+	ft_putnbr(42);
 }

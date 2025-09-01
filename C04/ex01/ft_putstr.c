@@ -1,48 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:11:39 by ceydac            #+#    #+#             */
-/*   Updated: 2025/08/30 16:51:24 by ceydac           ###   ########.fr       */
+/*   Created: 2025/09/01 12:23:19 by ceydac            #+#    #+#             */
+/*   Updated: 2025/09/01 12:32:40 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+#include <unistd.h>
+
+void ft_putchar (char c)
 {
-	int	i;
-	int	a;
-	
-	i = 0;
-	a = 0;
-	while (src[a] != 0)
-	{
-		a++;
-	}
-	if (size != 0)
-	{
-		while (dest[i] != '\0')
-		{
-			dest[i] = src[i];
-			if (a < size)
-				dest[i] = 0;
-			i++;
-		}
-	}
-	dest[i] = 0;
-	return (size);
+	write(1, &c, 1);
 }
 
-#include <stdio.h>
+void ft_putstr(char *str)
+{
+	while (*str != 0)
+	{
+		ft_putchar(*str);
+		str++;
+	}
+}
 
 int	main(void)
 {
-	char	src[] = "selam";
-	char	dest[10] = "se";
-	int	i = 6;
-
-	ft_strlcpy(dest, src, i);
-	printf("%s", dest);
+	char	str[] = "ceyda";
+	ft_putstr(str);
 }

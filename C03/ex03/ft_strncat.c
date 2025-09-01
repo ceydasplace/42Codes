@@ -1,48 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:11:39 by ceydac            #+#    #+#             */
-/*   Updated: 2025/08/30 16:51:24 by ceydac           ###   ########.fr       */
+/*   Created: 2025/08/30 19:30:56 by ceydac            #+#    #+#             */
+/*   Updated: 2025/08/30 19:45:57 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+char *ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	int	i;
 	int	a;
-	
+
 	i = 0;
 	a = 0;
-	while (src[a] != 0)
+	while (dest[i] != 0)
+		i++;
+	while (src[a] != 0 && a < nb)
 	{
+		dest[i] = src[a];
 		a++;
-	}
-	if (size != 0)
-	{
-		while (dest[i] != '\0')
-		{
-			dest[i] = src[i];
-			if (a < size)
-				dest[i] = 0;
-			i++;
-		}
+		i++;
 	}
 	dest[i] = 0;
-	return (size);
+	return (dest);
 }
 
 #include <stdio.h>
 
 int	main(void)
 {
-	char	src[] = "selam";
-	char	dest[10] = "se";
-	int	i = 6;
+	char	src[] = "lar";
+	char	dest[] = "selam";
+	int	nb = 3;
 
-	ft_strlcpy(dest, src, i);
+	ft_strncat(dest, src, nb);
 	printf("%s", dest);
 }
