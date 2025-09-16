@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceyda <ceyda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 15:59:18 by ceyda             #+#    #+#             */
-/*   Updated: 2025/08/29 17:44:06 by ceyda            ###   ########.fr       */
+/*   Updated: 2025/09/11 10:58:17 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 

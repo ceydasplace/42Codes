@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceyda <ceyda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 12:07:00 by ceyda             #+#    #+#             */
-/*   Updated: 2025/08/29 14:55:10 by ceyda            ###   ########.fr       */
+/*   Updated: 2025/09/10 12:44:06 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int	sayi;
 

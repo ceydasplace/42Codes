@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceyda <ceyda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 18:59:57 by ceyda             #+#    #+#             */
-/*   Updated: 2025/08/28 13:31:44 by ceyda            ###   ########.fr       */
+/*   Updated: 2025/09/10 12:20:40 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ void	ft_ultimate_ft(int *********nbr)
 	*********nbr = 42;
 }
 
-int main()
+int	main(void)
 {
 	int n;
 	int *p1;
@@ -27,7 +27,7 @@ int main()
 	int *******p7;
 	int ********p8;
 	int *********p9;
-	
+
 	p9 = &p8;
 	p8 = &p7;
 	p7 = &p6;

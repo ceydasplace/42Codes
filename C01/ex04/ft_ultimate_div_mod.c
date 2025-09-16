@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceyda <ceyda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 12:06:49 by ceyda             #+#    #+#             */
-/*   Updated: 2025/08/28 14:39:42 by ceyda            ###   ########.fr       */
+/*   Updated: 2025/09/10 12:17:33 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void 	ft_ultimate_div_mod(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int tempdiv;
-	int tempmod;
-	
+	int	tempdiv;
+	int	tempmod;
+
 	tempdiv = *a / *b;
 	tempmod = *a % *b;
 	*a = tempdiv;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceyda <ceyda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 12:07:10 by ceyda             #+#    #+#             */
-/*   Updated: 2025/08/29 15:43:04 by ceyda            ###   ########.fr       */
+/*   Updated: 2025/09/10 12:47:33 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	ft_swap(int *a, int *b)
 	*b = temp;
 }
 
-void ft_rev_int_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
 	int	bas;
 	int	son;
 
 	bas = 0;
 	son = size - 1;
-	while(bas < size / 2)
+	while (bas < size / 2)
 	{
 		ft_swap(&tab[bas], &tab[son]);
 		bas++;

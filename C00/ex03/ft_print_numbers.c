@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceyda <ceyda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 16:41:18 by ceyda             #+#    #+#             */
-/*   Updated: 2025/08/25 16:44:07 by ceyda            ###   ########.fr       */
+/*   Updated: 2025/09/09 17:25:03 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
-    char a;
+	char	a;
 
-    a = '0';
-    while(a <= '9')
-    {
-        write(1, &a, 1);
-        a++;
-    }
+	a = '0';
+	while (a <= '9')
+	{
+		write(1, &a, 1);
+		a++;
+	}
 }
-int main(void)
+int	main(void)
 {
-   ft_print_numbers(); 
+	ft_print_numbers();
 }

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceyda <ceyda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 18:58:12 by ceyda             #+#    #+#             */
-/*   Updated: 2025/08/25 16:16:41 by ceyda            ###   ########.fr       */
+/*   Updated: 2025/09/09 14:12:20 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
- void ft_putchar(char c)
+void	ft_putchar(char c)
 {
-        write(1, &c, 1);
+    write(1, &c, 1);
 }
 
 int main(void)

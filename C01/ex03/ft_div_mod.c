@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceyda <ceyda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 12:06:42 by ceyda             #+#    #+#             */
-/*   Updated: 2025/08/28 13:57:42 by ceyda            ###   ########.fr       */
+/*   Updated: 2025/09/10 12:12:12 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	if(b != 0)
+	if (b != 0)
 	{
-	*div = a / b;
-	*mod = a % b;
+		*div = a / b;
+		*mod = a % b;
 	}
 }
 #include <stdio.h>

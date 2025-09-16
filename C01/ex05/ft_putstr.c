@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceyda <ceyda@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ceydac <ceydac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 12:06:56 by ceyda             #+#    #+#             */
-/*   Updated: 2025/08/28 16:57:01 by ceyda            ###   ########.fr       */
+/*   Updated: 2025/09/10 12:43:13 by ceydac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char	c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
@@ -31,6 +31,6 @@ void	ft_putstr(char *str)
 
 int	main(void)
 {
-	char	ornek[] = "Ceyda   \0 sekam";
+	char	ornek[] = "Ceyda	\0 selam";
 	ft_putstr(ornek);
 }
